@@ -113,6 +113,6 @@ app.get('/', (req, res) => {
 app.get('/health', (req, res) => {
   res.json({ is_success: true, official_email: OFFICIAL_EMAIL });
 });
-app.listen(PORT,() => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`);
 });
