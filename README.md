@@ -1,4 +1,4 @@
-# BFHL API
+p# BFHL API
 
 This is a Node.js REST API for the BFHL (Bharat Fools Hostel Limited) task.
 
@@ -44,8 +44,10 @@ Deploy to Vercel, Railway, or Render.
 
 For Vercel:
 1. Push to GitHub.
-2. Import to Vercel.
-3. Set environment variables in Vercel dashboard.
+2. Login → New Project → Import repository
+3. Configure runtime
+4. Deploy and copy public URL
+5. Set environment variables in Vercel dashboard.
 
 ## GitHub Repository
 

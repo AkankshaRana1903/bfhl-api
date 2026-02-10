@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 const PORT = process.env.PORT || 3000;
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY || 'YOUR_GEMINI_API_KEY';
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY || 'AIzaSyDAA6lR6X6cXuB1K5wo7RswiDzXlH3HaHg';
 const OFFICIAL_EMAIL = process.env.OFFICIAL_EMAIL || 'akanksha0100.be23@chitkara.edu.in';
 function isPrime(num) {
   if (num<=1) return false;
@@ -106,6 +106,10 @@ app.post('/bfhl', async (req, res) => {
     res.status(500).json({ is_success: false, message: error.message });
   }
 });
+app.get('/', (req, res) => {
+  res.json({ message: 'BFHL API is running. Use /health for health check or /bfhl for operations.' });
+});
+
 app.get('/health', (req, res) => {
   res.json({ is_success: true, official_email: OFFICIAL_EMAIL });
 });
